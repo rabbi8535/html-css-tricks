@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    user-select: none;
+}
+
+#container{
+    width: 90%;
+    margin: 10% auto;
+    position: relative;    
+   
+}
+
+
+/* for animation box*/
+#box{
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: auto;
+    background-color: #262626;
+    position: relative;
+    top: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+
+    /* button section*/
+    #btn{
+        
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+       
+
+        & span{
+            display: block;
+            padding:10px ;
+            position: relative;
+        }
+
+        & #btn::after, & #btn::before, 
+        & span::after, & span:before{
+            content: " ";
+            background-color: #f2626f;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.5s;
+            z-index: -1;
+            
+
+        }
+
+        & :before,
+        & :after{
+                width: 2px;
+                height: 0;
+                }
+
+        & :after{
+                top: auto;
+                left: auto;
+                right: 0;
+                bottom: 0;
+        }
+
+        & :hover:before,
+        & :hover:after{
+            height: 100%;
+            transition-delay: 0.16s;
+    }
+
+        
+
+
+        & span::after, & span::before{
+            width: 0;
+            height: 3px;
+        }
+
+        & span::before{
+            right: 0;
+            left: auto;
+           
+        }
+        & span::after{
+            bottom: 0;
+            top: auto;
+            
+        }
+        &:hover span::after, 
+        &:hover span::before{
+            width: 100%;
+            
+        }
+    }
+    #content{
+        width:100%;
+        position: relative;
+        top: 10%;
+        text-align: justify;
+        color: #fff;
+        
+
+        & h2{
+            padding: 30px;
+            line-height: 20px;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+        & p{
+            padding: 30px;
+            line-height: 30px;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+           }
+    }
+
+    
+}
+
+#box::after,#box::before{
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: 
+    linear-gradient(45deg,#f2626f,#ffff00,#0000ff,
+    #ff00ff,#00ff00,#f2626f,#ffff00,#0000ff,
+    #ff00ff,#00ff00);
+    background-size: 400%;
+    animation: box 5s ease-in-out infinite alternate ;
+    z-index: -1;
+}
+#box::after{
+    filter: blur(35px);
+}
+
+@keyframes box {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+    
+}
+
+/* Modal box Section */
+
+#backdrop, #popup{
+    position:absolute ;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+#popup{
+    padding: 30px;
+    overflow: auto;
+    border-radius: 5px;
+    &::-webkit-scrollbar{
+        border-radius: 5px;
+    }
+    & h2{
+        text-align: center;
+        padding:20px 20px 10px 20px;
+        border-bottom: 1px solid #ccc;
+        text-transform: uppercase;
+        color: #EF2D5C;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+    & p{
+        text-align: justify;
+        padding: 20px 20px 0px 20px;
+        text-transform: capitalize;
+        color: #EF2D5C;
+        line-height: 30px;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+
+    #btn-2{
+        position: absolute;
+        left: 90%;
+        background-color: #fff;
+        color: #b13d5a49;
+        cursor: pointer;
+
+        &:hover{
+            color: #EF2D5C;
+        }
+    }
+    #btn-3{
+        position: absolute;
+        left: 80%;
+        padding: 10px 25px;
+        background-color: #EF2D5C;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover{
+            background: #ea4b73;
+        }
+    }
+
+    }
+ 
+#btn-1[type='checkbox']{
+    position: absolute;
+    display: none;  
+   
+}
+#btn-1[type='checkbox']:checked ~ #backdrop{
+    
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#btn-1[type='checkbox']:checked ~ #popup{
+    
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(255,255,255,1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+

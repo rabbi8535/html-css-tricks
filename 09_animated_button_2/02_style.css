@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10%;
+    font-family: fantasy;
+    font-weight: lighter;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+
+}
+
+.button{
+    width: 80%;
+    margin-top: 10%;
+    text-align: center;
+    
+    #btn-1{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: cadetblue;
+        text-transform: uppercase;
+        margin: 0px 5px;
+        padding: 10px;
+
+        & span{
+           
+            padding: 30px 20px;
+            /* margin: 20px; */
+        }
+    }
+
+}
+
+
+#btn-1::after, #btn-1::before,
+#btn-1 span::after,#btn-1 span::before{
+    content: "";
+    background-color: #c21313;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: all 0.2s ease-in-out 0s;
+    
+}
+
+#btn-1::after, 
+#btn-1::before{
+    width: 3px;
+    height: 0;
+   
+}
+
+#btn-1::after{
+    top: atuo;
+    left: auto;
+    right: 0;
+    bottom: 0;
+}
+
+#btn-1:hover::after,
+#btn-1:hover::before{
+    width: 2px;
+    height: 100%;
+    transition-delay: 0.2s;
+}
+
+#btn-1 span::after,
+#btn-1 span::before{
+    width: 0;
+    height: 3px;
+    transition-delay: 0.2s;
+    
+}
+
+#btn-1 span::after{
+    
+    left: auto;
+    right: 0;
+   
+}
+
+#btn-1 span::after{
+    
+    top: auto;
+    bottom: 0;
+   
+}
+
+#btn-1:hover span::after,
+#btn-1:hover span::before{
+    width: 100%;
+    transition-delay: 0s;
+    
+
+}

@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:#00a8ff;
+    --color2:#8c7ae6;
+    --color3:#273c75;
+    --color4:#7f8fa6;
+    --color5:#192a56;
+    --color6:#e1b12c;
+
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-image:linear-gradient(to right,var(--color3),var(--color4)) ;
+}
+
+
+/* Tab section*/
+.container{
+    width: 80%;
+    margin: 5% auto;
+
+    & ul{
+        width: 100%;
+        margin: auto;
+        list-style: none;
+        position: relative;
+        display: flex;
+
+        & li{
+            display: block;
+
+            & input{
+                display: none;
+                position: absolute;
+            }
+            & label{
+                display: inline-block;
+                padding: 20px 30px ;
+                background-color: #00a8ff;
+                margin-right: 5px;
+                border-radius: 3px 3px 0 0;
+                cursor: pointer;
+            }
+            .content{
+                width: 100%;
+                aspect-ratio: 1/1;
+                background-color: var(--color2);
+                position: absolute;
+                padding: 20px;
+                left: 0;
+                top: 58px;
+                border-radius: 0 3px 3px 3px;
+                display: none;
+                user-select: none;
+                overflow: auto;
+
+                &::selection{
+                    background-color:greenyellow;
+                    color: black;
+                }
+                
+
+                & h2{
+                    padding: 10px;
+                    font-weight: 900;
+                    color: currentColor;
+                    text-align:justify;
+                
+                }
+
+                & p{
+                    padding: 10px;
+                    font-size: 1em;
+                    line-height: 30px;
+                    text-align:justify;
+                    word-spacing: 5px;
+                    letter-spacing: 2px;
+                    
+                    
+
+                }
+
+            }
+            & input[id^='tab']:checked ~ .content{
+                display: block;
+                color: #fff;
+                
+            }
+            & input[id^='tab']:checked + label{
+                background: var(--color2);
+                color: #fff;
+            }
+
+        }
+    }
+}
+
+/* Navbar section*/
+nav{
+    width: 100%;
+    margin: 5% auto;
+    position: sticky;
+    top: 0;
+
+    
+
+    & ul{
+        background: var(--color1);
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        
+        .active{
+            background: var(--color5);
+           }
+        & li{
+           position: relative;
+           padding: 10px;
+           border-radius: 2px;
+           cursor: pointer;
+
+           &:hover{
+             background: var(--color3);
+           }
+
+           &:hover > ul{
+            display: block;
+           }
+
+                  }
+
+           & a{
+             text-decoration: none;
+             color: whitesmoke;
+             padding: 0 10px;
+          
+           }
+        }
+
+    .submenu{
+        width: 133px;
+        background: var(--color1);
+        position: absolute;
+        top: 39px;
+        left: 0px;
+        display: flex;
+        flex-flow: column wrap;
+        display: none;
+
+        
+
+        & li{
+            width: 100%;
+            border-left: 3px solid var(--color1);
+            
+            &:hover{
+                border-left: 3px solid var(--color4);
+            }
+        }
+    }
+
+
+
+   
+
+    }
+
+/* Button section*/
+.button{
+    width: 100%;
+    margin: 2% auto;
+   
+
+    & a{
+        width: 200px;
+        position: relative;
+        margin: auto;
+        display: block;
+        padding: 10px 25px;
+        border-radius: 2px;
+        text-align: center;
+        text-decoration: none;
+        color: yellowgreen;
+        border: 1px solid var(--color6);
+        box-shadow: 2px 3px 6px -2px black;
+        z-index: 1;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 100%;
+            background-color: var(--color5);
+            z-index: -1;
+            transition: all 0.5s ;
+        }
+
+        &:hover{
+            color: white;
+        }
+        &:hover::after{
+            width: 100%;
+            
+        }
+    }
+}

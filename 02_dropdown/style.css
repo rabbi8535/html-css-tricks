@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --menu-color: #f0932b;
+    --menu-color2: #eb4d4b;
+    --menu-color3: #6ab04c;
+    --menu-color4:#badc58;
+    --menu-color5:#ff7979;
+}
+
+nav {
+    width: 95%;
+    margin: 5% auto;
+  
+
+    & ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        background-color: var(--menu-color3);
+        cursor: pointer;
+        transition: all 0.5s;
+
+        & li {
+            padding: 10px 15px;
+            position: relative;
+            &:hover {
+                background-color: var(--menu-color2);
+            }
+
+            & a.active {
+                padding: 10px 30px;
+                background-color: var(--menu-color2);
+            }
+            &:has(.active){
+                background-color: transparent;
+            }
+
+            & a {
+                padding: 10px 15px;
+                text-decoration: none;
+                color: white;
+
+                
+
+                
+
+
+            }
+        }
+
+
+    }
+
+}
+
+
+nav ul ul{
+    width: 140px;
+    position: absolute;
+    margin-left: 10px;
+    left: -11px;
+    top: 39px;
+    display: none;
+    flex-flow: column wrap;
+    border: 1px solid var(--menu-color);
+    background-color: var(--menu-color);
+}
+nav ul ul li{
+   
+    border-left: 3px solid var(--menu-color);
+    transition: all 0.5s;
+}
+nav ul ul li a{
+   
+    text-align: center;
+    font-size: 16px;
+}
+nav ul ul li:hover{
+    background-color: var(--menu-color5);
+    border-left: 3px solid var(--menu-color4);
+    transition: all 0.5s;
+    
+
+    
+}
+
+nav ul li:hover > ul{
+    display: flex;
+    transition: all 1s;
+}
+
+#submenu > ul{
+    width: 150px;
+}

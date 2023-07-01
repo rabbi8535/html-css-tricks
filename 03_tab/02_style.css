@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:#2C3E50;
+    --color2:#FFFFFF;
+    --color3:#F39C12;
+}
+body{
+    background-color: var(--color1);
+}
+
+
+.container{
+    width: 80%;
+    margin: 5% auto;
+
+    & ul{
+        width: 100%;
+        margin: auto;
+        list-style: none;
+        position: relative;
+        display: flex;
+       
+
+        & li{
+           
+            display: block;
+        }
+
+        & input[type="radio"]{
+            position: absolute;
+            display: none;
+        }
+
+        & label{
+            background: var(--color3);
+            font-size: large;
+            padding: 20px 30px;
+            display: inline-block;
+            border-radius: 3px 3px 0px 0px;
+            margin-right: 5px ;
+            cursor:pointer;
+            
+        }
+        .content{
+            background: var(--color2);
+            position: absolute;
+            padding: 20px;
+            left: 0px;
+            top: 60px;
+            border-radius: 0px 3px 3px 3px;
+            display: none;
+            user-select: all;
+
+            & ::selection{
+                color: #F39C12;
+                background-color:#2C3E50;
+            }
+
+            & h2{
+                padding: 10px;
+                text-align: left;
+            }
+            & p{
+                padding: 10px;
+                line-height:25px ;
+                text-align: justify;
+                color: currentColor;
+                word-spacing: 5px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+            }
+
+        }
+        & input[id^='tab']:checked ~ .content{
+            display: block;
+        }
+        & input[id^='tab']:checked + label{
+          background-color: var(--color2);
+        }
+    }
+}

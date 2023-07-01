@@ -1,0 +1,80 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:#95a5a6;
+    --color2:#bdc3c7;
+    --color3:#3498db;
+}
+
+body{
+    background-color: var(--color1);
+    user-select: none;
+    overflow-y: scroll;
+   
+}
+
+.container{
+    width: 80%;
+    margin: 5% auto;
+
+    .accrodion{
+        position: relative;
+        background: #fff;
+
+        & input[type="checkbox"]{
+            position: absolute;
+            display: none;
+        }
+
+        & label{
+            display: block;
+            background-color: var(--color3);
+            padding: 10px 40px 10px 10px ;
+            color: white;
+            border-bottom: 1px solid var(--color1);
+            cursor: pointer;
+
+            &::after{
+                content: '\f078';
+                font-family: fontawesome;
+                position: absolute;
+                top: 13px;
+                right: 20px;
+                transform: rotate(90deg);
+                transition: all 0.5s;
+            }
+        }
+
+        & input[type="checkbox"]:checked ~ label::after{
+            transform: rotate(0deg);
+        }
+
+        .acc-content{
+             max-height: 0vh;
+             overflow: hidden;
+             transition: all 0.5s ease;
+             
+
+             & p{
+                padding: 30px 30px 5px 30px;
+                font-size: 15px;
+                text-align: justify;
+                text-transform: capitalize;
+                word-spacing: 5px;
+                letter-spacing: 2px;
+                line-height: 30px;
+             }
+        }
+        & input[type="checkbox"]:checked ~ .acc-content{
+            max-height: 100vh;
+           
+        }
+    }
+}
