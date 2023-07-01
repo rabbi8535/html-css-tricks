@@ -1,11 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, 
+     initial-scale=1.0">
+    <link rel="stylesheet" href="01_style.css">
     <title>Project</title>
 </head>
+
 <body>
-    
+     
+    <!-- header section -->
+    <header>
+
+        <input type="checkbox" name="toggle" id="toggle" class="media-query">
+        <label for="toggle" class="media-query">
+            <div class="spinner top"></div>
+            <div class="spinner middle"></div>
+            <div class="spinner bottom"></div>
+        </label>
+
+        <nav class="navbar">
+            <ul>
+
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu-1</a></li>
+                        <li><a href="#">submenu-2</a></li>
+                        <li><a href="#">submenu-3</a></li>
+                        <li><a href="#">submenu-4</a>
+
+                            <ul class="catogary">
+                                <li><a href="#">catogary-1</a></li>
+                                <li><a href="#">catogary-2</a></li>
+                                <li><a href="#">catogary-3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu-1</a></li>
+                        <li><a href="#">submenu-2</a></li>
+                        <li><a href="#">submenu-3</a></li>
+                        <li><a href="#">submenu-4</a>
+
+                            <ul class="catogary">
+                                <li><a href="#">catogary-1</a></li>
+                                <li><a href="#">catogary-2</a></li>
+                                <li><a href="#">catogary-3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Gallary</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu-1</a></li>
+                        <li><a href="#">submenu-2</a></li>
+                        <li><a href="#">submenu-3</a></li>
+                        <li><a href="#">submenu-4</a>
+
+                            <ul class="catogary">
+                                <li><a href="#">catogary-1</a></li>
+                                <li><a href="#">catogary-2</a></li>
+                                <li><a href="#">catogary-3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Contact us</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu-1</a></li>
+                        <li><a href="#">submenu-2</a></li>
+                        <li><a href="#">submenu-3</a></li>
+                        <li><a href="#">submenu-4</a>
+
+                            <ul class="catogary">
+                                <li><a href="#">catogary-1</a></li>
+                                <li><a href="#">catogary-2</a></li>
+                                <li><a href="#">catogary-3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+            </ul>
+
+
+        </nav>
+        <div class="btn ">
+            <a href="#">Log in</a>
+            <a href="#">Sign in</a>
+        </div>
+    </header>
+    <div class="agreement">
+        <input type="checkbox" name="click" id="tog">
+        <label for="tog" id="primary">
+            Read agreement</label>
+        <div class="backdrop"></div>
+        <div class="popup" id="popup">
+            <label for="tog" id="lab-1">❌</label>
+            <h3>Are you agree ?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Repellat, esse 
+                assumenda facilis dolor, nobis unde, sed 
+                similique hic saepe laudantium 
+                accusamus sequi ratione! Deleniti eius 
+                sit dolorem ullam numquam non.</p>
+                <label for="tog" class="lab" 
+                id="lab-2"><span>Yes</span></label>
+                <label for="tog" class="lab" 
+                id="lab-3"><span>No</span></label>
+
+        </div>
+    </div>
+
+    <!-- main section -->
+
+    <!-- tab part -->
+    <main>
+        <div class="container">
+            <ul>
+                <li>
+                    <input type="radio" name="tab" 
+                     id="tab-1" checked>
+                    <label for="tab-1">tab-1</label>
+                    <div class="content">
+                        <h3>tab-1</h3>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Cupiditate odio dolorum rem
+                            placeat
+                            sit, soluta sunt aut voluptas
+                            eos amet veritatis vero nihil
+                            optio, id recusandae
+                            quibusdam
+                            itaque? Accusamus, eveniet?
+                        </p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Maiores ex quae officia
+                            perspiciatis
+                            aspernatur tempore at,
+                            veritatis nihil corrupti.
+                            Tempora recusandae
+                            voluptatum consequatur
+                            consequuntur, saepe ipsum
+                            adipisci distinctio vel
+                            maiores?</p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Beatae, praesentium. Eius
+                            qui
+                            aperiam aspernatur sit nostrum
+                            fugit ipsam, fugiat dolor
+                            totam et harum placeat
+                            dolores,
+                            culpa quae sequi, similique
+                            sapiente?</p>
+                            <p>Lorem ipsum dolor sit, amet 
+                                consectetur adipisicing 
+                                 elit. 
+                                 Voluptatibus maiores 
+                                  asperiores
+                               molestiae reiciendis nobis 
+                                temporibus ullam 
+                                 voluptatem 
+                                 natus, rerum, 
+                                  perspiciatis 
+                                  dicta quia
+                               aut eum voluptate nisi eius 
+                                minus accusantium saepe 
+                                 sed, 
+                                 iste iure ipsa numquam 
+                                  perferendis
+                               qui! Ex, quia modi quas 
+                                excepturi explicabo magnam 
+                                 sint? Illo eum eos ut 
+                                  similique provident
+                               fugiat maiores rerum dolor 
+                                explicabo ipsum qui 
+                                 laudantium maxime amet 
+                                  voluptates reiciendis
+                               quibusdam est dolorum 
+                                aliquid 
+                                accusamus, numquam impedit 
+                                 aliquam, omnis 
+                                  consequatur 
+                                  rem.
+                               Perspiciatis, assumenda 
+                                quod 
+                                omnis nihil quam vitae qui 
+                                 consequatur quasi 
+                                  voluptatum?
+                               Tempora, facilis porro 
+                                incidunt laborum accusamus 
+                                 odit ea iste cumque. 
+                                  Vitae 
+                                  nulla debitis
+                               placeat earum quo maxime, 
+                                iusto totam ex itaque 
+                                 cupiditate unde fuga odit 
+                                  amet deserunt
+                               reprehenderit, quidem 
+                                aliquid! 
+                                Voluptas culpa provident 
+                                 suscipit eius. Porro in 
+                                  quos 
+                                  minus
+                               vero eum cumque voluptate, 
+                                explicabo veniam a quaerat 
+                                 accusamus corrupti. Fugit 
+                                  aut aperiam,
+                               cupiditate vel ipsam 
+                                impedit 
+                                fuga dicta praesentium 
+                                 voluptates perspiciatis 
+                                  voluptatum
+                               voluptatem maxime ipsa, 
+                                pariatur magnam iste amet 
+                                 eum 
+                                 modi hic saepe ex. 
+                                  Accusantium itaque
+                               tempore maxime. Nobis odio 
+                                voluptas modi consequuntur 
+                                 dicta debitis aspernatur 
+                                  alias non,
+                               excepturi ipsum minus 
+                                assumenda iure molestiae 
+                                 deleniti sed at enim in 
+                                  sequi illo? Eos,
+                               facere beatae corrupti, 
+                                unde 
+                                officiis cum saepe maiores 
+                                 quam, tempora similique 
+                                  perspiciatis
+                               deleniti.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tab" 
+                     id="tab-2">
+                    <label for="tab-2">tab-2</label>
+                    <div class="content">
+                        <h3>tab-2</h3>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Cupiditate odio dolorum rem
+                            placeat
+                            sit, soluta sunt aut voluptas
+                            eos amet veritatis vero nihil
+                            optio, id recusandae
+                            quibusdam
+                            itaque? Accusamus, eveniet?
+                        </p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Maiores ex quae officia
+                            perspiciatis
+                            aspernatur tempore at,
+                            veritatis nihil corrupti.
+                            Tempora recusandae
+                            voluptatum consequatur
+                            consequuntur, saepe ipsum
+                            adipisci distinctio vel
+                            maiores?</p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Beatae, praesentium. Eius
+                            qui
+                            aperiam aspernatur sit nostrum
+                            fugit ipsam, fugiat dolor
+                            totam et harum placeat
+                            dolores,
+                            culpa quae sequi, similique
+                            sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet 
+                             consectetur adipisicing elit. 
+                              Voluptatibus maiores 
+                               asperiores
+                            molestiae reiciendis nobis 
+                             temporibus ullam voluptatem 
+                              natus, rerum, perspiciatis 
+                               dicta quia
+                            aut eum voluptate nisi eius 
+                             minus accusantium saepe sed, 
+                              iste iure ipsa numquam 
+                               perferendis
+                            qui! Ex, quia modi quas 
+                             excepturi explicabo magnam 
+                              sint? Illo eum eos ut 
+                               similique provident
+                            fugiat maiores rerum dolor 
+                             explicabo ipsum qui 
+                              laudantium maxime amet 
+                               voluptates reiciendis
+                            quibusdam est dolorum aliquid 
+                             accusamus, numquam impedit 
+                              aliquam, omnis consequatur 
+                               rem.
+                            Perspiciatis, assumenda quod 
+                             omnis nihil quam vitae qui 
+                              consequatur quasi 
+                               voluptatum?
+                            Tempora, facilis porro 
+                             incidunt laborum accusamus 
+                              odit ea iste cumque. Vitae 
+                               nulla debitis
+                            placeat earum quo maxime, 
+                             iusto totam ex itaque 
+                              cupiditate unde fuga odit 
+                               amet deserunt
+                            reprehenderit, quidem aliquid! 
+                             Voluptas culpa provident 
+                              suscipit eius. Porro in quos 
+                               minus
+                            vero eum cumque voluptate, 
+                             explicabo veniam a quaerat 
+                              accusamus corrupti. Fugit 
+                               aut aperiam,
+                            cupiditate vel ipsam impedit 
+                             fuga dicta praesentium 
+                              voluptates perspiciatis 
+                               voluptatum
+                            voluptatem maxime ipsa, 
+                             pariatur magnam iste amet eum 
+                              modi hic saepe ex. 
+                               Accusantium itaque
+                            tempore maxime. Nobis odio 
+                             voluptas modi consequuntur 
+                              dicta debitis aspernatur 
+                               alias non,
+                            excepturi ipsum minus 
+                             assumenda iure molestiae 
+                              deleniti sed at enim in 
+                               sequi illo? Eos,
+                            facere beatae corrupti, unde 
+                             officiis cum saepe maiores 
+                              quam, tempora similique 
+                               perspiciatis
+                            deleniti.</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tab" 
+                     id="tab-3">
+                    <label for="tab-3">tab-3</label>
+                    <div class="content">
+                        <h3>tab-3</h3>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Cupiditate odio dolorum rem
+                            placeat
+                            sit, soluta sunt aut voluptas
+                            eos amet veritatis vero nihil
+                            optio, id recusandae
+                            quibusdam
+                            itaque? Accusamus, eveniet?
+                        </p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Maiores ex quae officia
+                            perspiciatis
+                            aspernatur tempore at,
+                            veritatis nihil corrupti.
+                            Tempora recusandae
+                            voluptatum consequatur
+                            consequuntur, saepe ipsum
+                            adipisci distinctio vel
+                            maiores?</p>
+                        <p>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit.
+                            Beatae, praesentium. Eius
+                            qui
+                            aperiam aspernatur sit nostrum
+                            fugit ipsam, fugiat dolor
+                            totam et harum placeat
+                            dolores,
+                            culpa quae sequi, similique
+                            sapiente?</p>
+                            <p>Lorem ipsum dolor sit, amet 
+                                consectetur adipisicing 
+                                 elit. 
+                                 Voluptatibus maiores 
+                                  asperiores
+                               molestiae reiciendis nobis 
+                                temporibus ullam 
+                                 voluptatem 
+                                 natus, rerum, 
+                                  perspiciatis 
+                                  dicta quia
+                               aut eum voluptate nisi eius 
+                                minus accusantium saepe 
+                                 sed, 
+                                 iste iure ipsa numquam 
+                                  perferendis
+                               qui! Ex, quia modi quas 
+                                excepturi explicabo magnam 
+                                 sint? Illo eum eos ut 
+                                  similique provident
+                               fugiat maiores rerum dolor 
+                                explicabo ipsum qui 
+                                 laudantium maxime amet 
+                                  voluptates reiciendis
+                               quibusdam est dolorum 
+                                aliquid 
+                                accusamus, numquam impedit 
+                                 aliquam, omnis 
+                                  consequatur 
+                                  rem.
+                               Perspiciatis, assumenda 
+                                quod 
+                                omnis nihil quam vitae qui 
+                                 consequatur quasi 
+                                  voluptatum?
+                               Tempora, facilis porro 
+                                incidunt laborum accusamus 
+                                 odit ea iste cumque. 
+                                  Vitae 
+                                  nulla debitis
+                               placeat earum quo maxime, 
+                                iusto totam ex itaque 
+                                 cupiditate unde fuga odit 
+                                  amet deserunt
+                               reprehenderit, quidem 
+                                aliquid! 
+                                Voluptas culpa provident 
+                                 suscipit eius. Porro in 
+                                  quos 
+                                  minus
+                               vero eum cumque voluptate, 
+                                explicabo veniam a quaerat 
+                                 accusamus corrupti. Fugit 
+                                  aut aperiam,
+                               cupiditate vel ipsam 
+                                 impedit 
+                                fuga dicta praesentium 
+                                 voluptates perspiciatis 
+                                  voluptatum
+                               voluptatem maxime ipsa, 
+                                pariatur magnam iste amet 
+                                 eum 
+                                 modi hic saepe ex. 
+                                  Accusantium itaque
+                               tempore maxime. Nobis odio 
+                                voluptas modi consequuntur 
+                                 dicta debitis aspernatur 
+                                  alias non,
+                               excepturi ipsum minus 
+                                assumenda iure molestiae 
+                                 deleniti sed at enim in 
+                                  sequi illo? Eos,
+                               facere beatae corrupti, 
+                                unde 
+                                officiis cum saepe maiores 
+                                 quam, tempora similique 
+                                  perspiciatis
+                               deleniti.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </main>
+
+    <div class="container-2">
+        <div class="accrodion">
+            <input type="checkbox" name="accrdion" 
+                 id="acc-1">
+                 <label for="acc-1">What is 
+                 html</label>
+                 <div class="description">
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>    
+                 </div>
+            
+        </div>
+        <div class="accrodion">
+            <input type="checkbox" name="accrdion" 
+                 id="acc-2">
+                 <label for="acc-2">What is 
+                 html</label>
+                 <div class="description">
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>   
+                 </div>
+            
+        </div>
+        <div class="accrodion">
+            <input type="checkbox" name="accrdion" 
+                 id="acc-3">
+                 <label for="acc-3">What is 
+                 html</label>
+                 <div class="description">
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>
+                    <p>Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Sit 
+                        minima alias autem similique eum 
+                        dolorem sapiente voluptatum 
+                        nemo possimus totam provident 
+                        corporis ut officia corrupti 
+                        atque modi, aspernatur ab 
+                        sunt!</p>   
+                 </div>
+            
+        </div>
+    </div>
+
 </body>
+
 </html>
